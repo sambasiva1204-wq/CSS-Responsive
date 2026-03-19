@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            width: 50%;
+            height: 50vh;
+            gap: 5%;
+
+        }
+
+        .header {
+            grid-column: 1/2;
+            background-color: rgb(255, 255, 0);
+            height: 50px;
+            text-align: left;
+            font-size: 2rem;
+        }
+
+        .main {
+            width: 100%;
+            display: flex;
+            gap: 40px;
+            font-size: 20px;
+        }
+
+        .leftbox {
+            background-color: rgba(255, 0, 0, 0.877);
+            width: 50%;
+            height: 40vh;
+            text-align: left;
+        }
+
+        .rightbox {
+            background-color: rgb(20, 218, 13);
+            width: 50%;
+            height: 40vh;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+
+            .container {
+                width: 90%;
+            }
+
+            .header {
+                height: 20vh;
+            }
+
+            .main {
+                flex-direction: column;
+            }
+
+
+            .leftbox,
+            .rightbox {
+                width: 100%;
+                height: 20vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">NAVIGATION</div>
+        <div class="main">
+            <div class="leftbox">LEFT BOX</div>
+            <div class="rightbox">RIGHT BOX</div>
+        </div>
+    </div>
+</body>
+
+</html>
