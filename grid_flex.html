@@ -12,185 +12,261 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow-x: hidden;
+            overflow-y: hidden;
+
         }
 
         .container {
             display: flex;
-            padding: 50%;
             width: 100%;
-            gap: 20px;
             align-items: center;
+            justify-content: center;
             background-color: white;
             align-items: flex-end;
+
         }
 
         .box {
-            width: 30px;
-            height: 30px;
+            width: 60px;
+            height: 50px;
             border: 2px solid black;
+
+
         }
 
-        .left1 {
+        .leftcontainer {
             display: flex;
-            flex-direction: column;
+            grid-template-columns: repeat(4, 30px);
             gap: 20px;
+            align-items: self-end;
+            padding: 20px;
+
         }
 
-        .left2 {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
+        .left1,
+        .left2,
         .left3 {
-            display: flex;
-            flex-direction: column;
+            display: grid;
             gap: 20px;
         }
 
-        .grid-blue {
-            display: grid;
-            grid-template-columns: repeat(10, 30px);
+        .center {
+            display: flex;
+            flex-direction: row;
+            grid-template-columns: repeat(4, 30px);
+            grid-column: auto;
             gap: 20px;
+            padding: 20px;
+            padding-left: 5px;
+        }
 
+
+        .center1,
+        .center2,
+        .center3,
+        .center4,
+        .center5,
+        .center6,
+        .center7,
+        .center8,
+        .center9 {
+            display: grid;
+            gap: 20px;
         }
 
         .right {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            grid-template-columns: repeat(6, 30px);
+            grid-column: auto;
+
             gap: 20px;
-            align-items: flex-end;
+            padding: 20px;
+            padding-left: 5px;
         }
 
-        .grid-right{
-            display: grid;
-            grid-template-columns: repeat(6, 30px);
+        .last {
+            display: flex;
+            flex-direction: row;
+            grid-template-columns: repeat(7, 30px);
+            grid-column: auto;
+
             gap: 20px;
+            padding: 20px;
+            padding-left: 5px;
+        }
+
+        .right1,
+        .right2,
+        .right3,
+        .right4,
+        .right5,
+        .right6 {
+            display: grid;
+            gap: 20px;
+
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="left1">
-            <div class="box red" style="background-color: red;"></div>
-            <div class="box green" style="background-color: rgba(72, 138, 72, 0.767);"></div>
-            <div class="box green" style="background-color: rgba(72, 138, 72, 0.767);"></div>
-            <div class="box green" style="background-color: rgba(72, 138, 72, 0.767);"></div>
-            <div class="box green" style="background-color: rgba(72, 138, 72, 0.767);"></div>
-            <div class="box green" style="background-color: rgba(72, 138, 72, 0.767);"></div>
-            <div class="box green" style="background-color: rgba(72, 138, 72, 0.767);"></div>
+        <div class="leftcontainer">
+            <div class="left1">
+                <div class="box red" style="background-color: red"></div>
+                <div class="box green" style="background-color: rgba(72, 138, 72, 0.767);"></div>
+                <div class="box green" style="background-color: rgba(72, 138, 72, 0.767);"></div>
+                <div class="box green" style="background-color: rgba(72, 138, 72, 0.767);"></div>
+                <div class="box green" style="background-color: rgba(72, 138, 72, 0.767);"></div>
+                <div class="box green" style="background-color: rgba(72, 138, 72, 0.767);"></div>
+                <div class="box green" style="background-color: rgba(72, 138, 72, 0.767);"></div>
 
-        </div>
-        <div class="left2">
-            <div class="box pink" style="background-color: indianred;"></div>
-            <div class="box pink" style="background-color:indianred;"></div>
-            <div class="box pink" style="background-color:indianred;"></div>
-            <div class="box pink" style=" background-color: indianred;"></div>
-            <div class="box pink" style="background-color: indianred;"></div>
-            <div class="box pink" style="background-color: indianred;"></div>
-        </div>
-        <div class="left3">
-            <div class="box black" style="background-color: black;"></div>
-            <div class="box black" style="background-color: black;"></div>
-        </div>
-        <div class="center">
-            <div class="grid-blue">
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
-                <div class="box blue" style="background-color: blue;"></div>
+            </div>
+            <div class="left2">
+                <div class="box pink" style="background-color: indianred;"></div>
+                <div class="box pink" style="background-color:indianred;"></div>
+                <div class="box pink" style="background-color:indianred;"></div>
+                <div class="box pink" style=" background-color: indianred;"></div>
+                <div class="box pink" style="background-color: indianred;"></div>
+                <div class="box pink" style="background-color: indianred;"></div>
+            </div>
+            <div class="left3">
+                <div class="box black" style="background-color: black;"></div>
+                <div class="box black" style="background-color: black;"></div>
             </div>
         </div>
 
+        <div class="center">
+            <div class="center1">
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+
+            </div>
+
+            <div class="center2">
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+
+            </div>
+
+            <div class="center3">
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+
+            </div>
+
+            <div class="center4">
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+
+            </div>
+            <div class="center5">
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+
+            </div>
+            <div class="center6">
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+
+            </div>
+            <div class="center7">
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+
+            </div>
+            <div class="center8">
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+
+            </div>
+            <div class="center9">
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+                <div class="box blue" style="background-color: blue;"></div>
+
+            </div>
+        </div>
+
+
         <div class="right">
-            <div class="box yellow top" style="background-color: yellow;"></div>
-            <div class="grid-right">
-                <div class="box purple" style="background-color: purple;"></div>
-                <div class="box green" style="background-color: green;"></div>
-                <div class="box green" style="background-color: green;"></div>
-                <div class="box green" style="background-color:green"></div>
-                <div class="box red" style="background-color: crimson;"></div>
-                <div class="box yellow" style="background-color: yellow;"></div>
 
-                <div class="box orange" style="background-color: orangered;"></div>
-                <div class="box purple" style="background-color: purple;"></div>
-                <div class="box green" style="background-color: green;"></div>
-                <div class="box green" style="background-color: green;"></div>
-                <div class="box red" style="background-color: crimson;"></div>
-                <div class="box yellow" style="background-color: yellow;"></div>
+            <div class="right1">
 
-                <div class="box orange" style="background-color: orangered;"></div>
                 <div class="box purple" style="background-color: purple;"></div>
+                <div class="box orange" style="background-color:orange;"></div>
+                <div class="box orange" style="background-color: orange;"></div>
+                <div class="box orange" style="background-color:orange"></div>
+                <div class="box orange" style="background-color:orange;"></div>
+                <div class="box red" style="background-color:gray;"></div>
+            </div>
+            <div class="right2">
+                <div class="box green" style="background-color: green;"></div>
+                <div class="box purple" style="background-color: purple;"></div>
+                <div class="box purple" style="background-color: purple;"></div>
+                <div class="box orange" style="background-color:orange;"></div>
+                <div class="box orange" style="background-color: orange;"></div>
+                <div class="box gray" style="background-color: gray;"></div>
+            </div>
+            <div class="right3">
+                <div class="box green" style="background-color: green;"></div>
+                <div class="box green" style="background-color: green;"></div>
                 <div class="box purple" style=" background-color: purple;"></div>
+                <div class="box purple" style=" background-color: purple;"></div>
+                <div class="box orange" style="background-color: orange;"></div>
+                <div class="box gray" style="background-color:gray;"></div>
+            </div>
+            <div class="right4">
+                <div class="box green" style="background-color: green;"></div>
+                <div class="box green" style="background-color: green"></div>
                 <div class="box green" style=" background-color: green;"></div>
-                <div class="box red" style="background-color: crimson;"></div>
-                <div class="box yellow" style="background-color: yellow;"></div>
-
-                <div class="box orange" style="background-color: orangered;"></div>
-                <div class="box orange" style="background-color: orangered;"></div>
-                <div class="box purple" style=" background-color: purple;"></div>
                 <div class="box purple" style="background-color: purple;"></div>
-                <div class="box red" style="background-color: crimson;"></div>
-                <div class="box yellow" style=" background-color:yellow;"></div>
+                <div class="box purple" style="background-color:purple;"></div>
+                <div class="box gray" style=" background-color:gray;"></div>
+            </div>
+            <div class="right5">
+                <div class="box crimson" style="background-color: crimson;"></div>
+                <div class="box crimson" style="background-color: crimson;"></div>
+                <div class="box crimson" style="background-color: crimson;"></div>
+                <div class="box crimson" style="background-color: crimson;"></div>
+                <div class="box crimson" style="background-color: crimson;"></div>
+                <div class="box gray" style="background-color:gray;"></div>
+            </div>
 
-                <div class="box orange" style="background-color: orangered;"></div>
-                <div class="box orange" style="background-color: orangered;"></div>
-                <div class="box orange" style="background-color: orangered;"></div>
-                <div class="box purple" style="background-color: purple;"></div>
-                <div class="box red" style="background-color: crimson;"></div>
+        </div>
+        <div class="last">
+            <div class="right6">
                 <div class="box yellow" style="background-color: yellow;"></div>
-
-
-                <div class="box gray" style="background-color: gray;"></div>
-                <div class="box gray" style="background-color: gray;"></div>
-                <div class="box gray" style="background-color: gray;"></div>
-                <div class="box gray" style="background-color: gray;"></div>
-                <div class="box gray" style="background-color: gray;"></div>
+                <div class="box yellow" style="background-color:yellow"></div>
+                <div class="box yellow" style="background-color:yellow;"></div>
+                <div class="box yellow" style="background-color:yellow;"></div>
+                <div class="box yellow" style="background-color: yellow;"></div>
+                <div class="box yellow" style="background-color: yellow;"></div>
                 <div class="box gray" style="background-color: gray;"></div>
             </div>
         </div>
 
     </div>
+
+
 
 
 
