@@ -4,354 +4,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KFC</title>
+    <title>KFC Clone</title>
     <style>
         body {
-            margin: auto;
+            margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            overflow-x: hidden;
         }
 
-        .container1 {
-            height: 100vh;
-            width: 100%;
-            background-color: white;
 
-
+        .container {
+            max-width: 1280px;
+            margin: auto;
+            padding: 0 24px;
         }
+
 
         .navbar {
+            background: black;
+        }
+
+        .navbar-inner {
             display: flex;
             justify-content: space-between;
-            background: black;
-            padding: 1%;
-            width: 100%;
-
+            align-items: center;
+            height: 64px;
         }
 
         .menu {
             display: flex;
-            padding-left: 19.2%;
+            gap: 24px;
         }
 
         .menu a {
-            background-color: black;
-            color: #bebebe;
-            padding: 11px;
+            color: #eee;
             text-decoration: none;
-
-
-
+            font-size: 13px;
+            letter-spacing: 0.5px;
         }
 
         .menu a:hover {
-            color: #ffffff;
+            color: white;
         }
 
         .order-btn {
-            background-color: rgba(204, 9, 9, 0.877);
+            background: #e4002b;
             color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-size: 13px;
             font-weight: bold;
-            border-radius: 5px;
-            padding: 10px;
-            margin-right: 24%;
-
+            cursor: pointer;
         }
+
 
         .breadcrumb {
             display: flex;
-            gap: 2px;
-            padding: 1% 20%;
-
+            gap: 8px;
+            padding: 16px 0;
+            flex-wrap: wrap;
         }
 
         .crumb {
-            background: rgba(204, 9, 9, 0.877);
-            padding: 10px;
+            background: #e4002b;
             color: white;
-            font-size: 14px;
-            border-radius: 4px;
-
+            padding: 6px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            white-space: nowrap;
         }
+
 
         .container2 {
             display: flex;
-            gap: 20px;
-            justify-content: center;
-            width: 90%;
-            padding: 20px 10%;
+            gap: 40px;
+            padding: 20px 0;
             align-items: center;
-            margin-left: 120px;
-
         }
 
         .left {
-            width: 20%;
+            flex: 0 0 40%;
 
-        }
-
-        .left h1 {
-            font-size: 18px;
-            margin: 6px 0;
-        }
-
-
-        .left h2 {
-            color: rgb(204, 9, 9, 0.877);
-            font-size: 15px;
-        }
-
-        .left p {
-
-            font-size: 16px;
-            margin: 4px 0;
         }
 
         .right {
-            width: 70%;
-
+            /* flex: 0 0 60%; */
+            display: flex;
         }
 
         .right img {
-            width: 60%;
-            height: 370px;
-            border-radius: 3px;
-
-        }
-
-        .container3 {
-            display: flex;
-            justify-content: center;
             width: 100%;
-            gap: 20px;
-            flex-wrap: wrap;
+            height: 380px;
+            /* object-fit: contain; */
+
+
         }
+
+
+        .left h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            line-height: 1.4;
+        }
+
+        .left h2 {
+            font-size: 15px;
+            color: #e90832ec;
+
+        }
+
+        .left p {
+            font-size: 13px;
+            color: rgba(75, 74, 74, 0.884);
+        }
+
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+
+        }
+
+        .info {
+            color: #e4002b;
+            margin-top: 3px;
+
+        }
+
+
+        .buttons button {
+            background: #111;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            margin-right: 6px;
+            border-radius: 3px;
+            font-size: 12px;
+        }
+
 
         .cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            padding-right: 40px;
-
-
+            gap: 16px;
+            padding: 13px 0;
         }
 
-        .card1,
-        .card2,
-        .card3,
-        .card4 {
+        .card {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            gap: 12px;
             border: 1px solid #eee;
-            padding: 20px;
-            border-radius: 12px;
-            gap: 20px;
-            box-shadow: 0 12px 30px rgba(20, 20, 30, .06);
+            padding: 14px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
         }
 
-
-        .cardsText1,
-        .cardsText2,
-        .cardsText3,
-        .cardsText4 {
+        .card img {
             display: flex;
-            flex-direction: column;
-
-
-        }
-
-        .cardsText1 h3,
-        .cardsText2 h3,
-        .cardsText3 h3,
-        .cardsText4 h3 {
-            font-size: 15px;
-            margin-bottom: 5px;
-        }
-
-        .cardsText1 p,
-        .cardsText2 p,
-        .cardsText3 p,
-        .cardsText4 p {
-            margin-top: 0;
-            font-size: 14px;
-
-        }
-
-        .cards img {
             width: 100px;
             height: 100px;
-            border-radius: 10px;
-            align-items: center;
-            justify-content: center;
+            padding: 20px;
+            border-radius: 30px;
+
         }
 
-        @media (min-width:601px) and (max-width:1024px) {
+        .card h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 15px;
+            color: #111;
+        }
 
-            .navbar {
-                padding: 0 5%;
-            }
+        .card p {
+            font-size: 13px;
+            color: black;
+        }
 
-            /* .menu a {
-            font-size: 14px;
-            padding: 6px;
-        } */
 
-            .order-btn {
-                padding: 8px 12px;
-                font-size: 14px;
-            }
-
-            .breadcrumb {
-                padding: 10px 5%;
-                flex-wrap: wrap;
-                gap: 5px;
-            }
-
+        @media (max-width: 1024px) {
             .container2 {
                 flex-direction: column;
-                align-items: center;
-                text-align: center;
-                padding: 20px;
-                gap: 20px;
-
             }
 
-            .left h1 {
-                font-size: 22px;
-                line-height: 1.4;
-            }
-
-            .left h2 {
-                font-size: 14px;
-            }
-
-            .left p {
-                font-size: 13px;
+            .left,
+            .right {
+                flex: 100%;
             }
 
             .right img {
-                width: 90%;
+                height: auto;
             }
+        }
 
-            .buttons {
-                display: flex;
-                justify-content: center;
-                gap: 10px;
-                flex-wrap: wrap;
+
+        @media (max-width: 600px) {
+
+            .breadcrumb {
+                overflow-x: auto;
+                white-space: nowrap;
+                flex-wrap: nowrap;
             }
 
             .cards {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
-                padding: 20px;
+                grid-template-columns: 1fr;
             }
 
-            .card1,
-            .card2,
-            .card3,
-            .card4 {
-                flex-direction: column;
-                text-align: center;
-                padding: 15px;
+            .left h1 {
+                font-size: 18px;
             }
-
-            .cards img {
-                width: 90px;
-                height: 90px;
-            }
-
         }
     </style>
 </head>
 
 <body>
-    <div class="container1">
-        <header class="navbar">
+
+
+    <div class="navbar">
+        <div class="container navbar-inner">
             <div class="menu">
                 <a href="#">HOME</a>
                 <a href="#">MAP</a>
             </div>
             <button class="order-btn">START MY ORDER</button>
-        </header>
+        </div>
+    </div>
+
+
+    <div class="container">
         <div class="breadcrumb">
             <div class="crumb">Restaurants near me</div>
             <div class="crumb">Restaurants in Karnataka</div>
             <div class="crumb">Restaurants in Bengaluru</div>
             <div class="crumb">Restaurants in Kengeri Satellite Town</div>
         </div>
-        <div class="container2">
-            <div class="left">
-                <h1>KFC, Kengeri Satellite Town- Fried <br>Chicken, Wings & Burger Restaurant in<br>Bengaluru</h1>
-
-                <h2>
-                    <strong>KENGERI SATELLITE TOWN</strong>
-                </h2>
-
-                <h2>
-                    <strong>ADDRESS:</strong>
-                </h2>
-                <p>No 4 & 5 & 18 & 19,Ground Floor,WN 159,<br>upanagara<br>
-                    Kengeri satellite Town<br>Bengaluru-560060</p>
-                <h2>PHONE NUMBER</h2>
-                <p>+919553604747</p>
-                <h2>RESTAURANTS TIMEING</h2>
-                <p>Opens at 11:00 AM</p>
-                <div class="buttons">
-                    <button style="background-color: #000;color: #fff;">Delivery</button>
-                    <button style="background-color: #000;color: #fff;">Dine in</button>
-                    <button style="background-color: #000; color: #fff;">Takeaway</button>
-                </div>
-
-            </div>
-            <div class="right">
-                <img src="https://cdn6.singleinterface.com/files/banner_images/34404/4436_1760096178_KFCFreeZinger.jpg"
-                    alt="">
-            </div>
-        </div>
-        <div class="container3">
-            <div class="cards">
-                <div class="card1">
-                    <img src="https://cdn4.singleinterface.com/files/banner_images/34404/3514_1761718791_hcbuckets.jpg"
-                        alt="">
-                    <div class="cardsText1">
-                        <h3>BEST NON-VEG RESTARUNT NEAR YOU IN<br>KENGERI SATELLITE TOWN</h3>
-                        <p>Savor the legendary flavors of KFC at our Locality outlet,<br> your go-to destination for
-                            delicious non-vegetarian meals<br> that never disappoint.</p>
-                    </div>
-                </div>
-                <div class="card2">
-                    <img src="https://cdn4.singleinterface.com/files/banner_images/34404/8635_1761718776_hotwings.jpg"
-                        alt="">
-                    <div class="cardsText2">
-                        <h3>TRY KFC's SIGNATURE FRIED CHICKEN &<br> CRISPY CHICKEN WINGS</h3>
-                        <p>Indulge in KFC world-famous fried chicken and crispy<br>wings, made with our secret blend of
-                            herbs and spices for<br>that unforgettable taste.</p>
-                    </div>
-                </div>
-                <div class="card3">
-                    <img src="https://cdn4.singleinterface.com/files/banner_images/34404/4328_1761718806_burger.jpg"
-                        alt="">
-                    <div class="cardsText3">
-                        <h3>DELICIOUS CHICKEN BURGERS & MEALS AT KFC<br>BENGALURU</h3>
-                        <p>Enjoy a variety of mouth-watering chicken burgers and<br>combo meals, perfect for a quick
-                            bite or
-                            a hearty meal with<br>family and friends.</p>
-                    </div>
-                </div>
-                <div class="card4">
-                    <img src="https://cdn4.singleinterface.com/files/banner_images/34404/8104_1761718761_ricebowl.jpg"
-                        alt="">
-                    <div class="cardsText4">
-                        <h3>ORDER ONLINE OR VISIT US FOR DINE-IN &<br>TAKEAWAY</h3>
-                        <p>Get your favorite KFC meals delivered to your doorstep or<br>enjoy them at our outlet with
-                            dine-in and takeaway options<br>for your convenience.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
+
+
+    <div class="container">
+        <div class="container2">
+
+            <div class="left">
+                <h1>KFC, Kengeri Satellite Town -<br> Fried Chicken, Wings & Burger<br>Restaurant in Bengaluru</h1>
+
+                <h2>KENGERI SATELLITE TOWN</h2>
+
+                <div class="info">
+                    <h2>ADDRESS:</h2>
+                    <p> <strong>No 4 & 5 & 18 & 19, Ground Floor,WN 159,<br>upangra kenigeri satellite town<br>
+                            Bengaluru
+                            - 560060</strong></p>
+                </div>
+
+                <div class="info">
+                    <h2>PHONE NUMBER</h2>
+                    <p>+91 9553604747</p>
+                </div>
+
+                <div class="info">
+                    <h2>RESTAURANTS TIMEING</h2>
+                    <p>Opens at 11:00 AM</p>
+                </div>
+
+                <div class="buttons">
+                    <button>Delivery</button>
+                    <button>Dine-in</button>
+                    <button>Takeaway</button>
+                </div>
+            </div>
+
+            <div class="right">
+                <img src="https://cdn6.singleinterface.com/files/banner_images/34404/4436_1760096178_KFCFreeZinger.jpg">
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="cards">
+
+            <div class="card">
+                <img src="https://cdn4.singleinterface.com/files/banner_images/34404/3514_1761718791_hcbuckets.jpg">
+                <div>
+                    <h3>BEST NON-VEG RESTAURANT NEAR YOU IN KENGERI SATELLITE TOWN</h3>
+                    <p>Savor the legendary flavors of KFC at our locality outlet,you go-to destination for delicioous
+                        non-vegitarian meals that never disspoint.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://cdn4.singleinterface.com/files/banner_images/34404/8635_1761718776_hotwings.jpg">
+                <div>
+                    <h3>TRY KFC'S SIGNATURE FRIED CHICKEN & CRISPY CHICKEN WINGS</h3>
+                    <p>Indulge in KFC world-famous fried chicken and crispy wings, made with our secret blend of herbs
+                        and spices for that unforgettable taste.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://cdn4.singleinterface.com/files/banner_images/34404/4328_1761718806_burger.jpg">
+                <div>
+                    <h3>DELICIOUS BURGERS & MEALS AT KFC BENGALURU</h3>
+                    <p>Enjoy a variety of mouth-watering chicken burgers and combo meals, perfect for a quick bite or a
+                        hearty meal with family and friends.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://cdn4.singleinterface.com/files/banner_images/34404/8104_1761718761_ricebowl.jpg">
+                <div>
+                    <h3>ORDER ONLINE OR VISIT US FOR DINE-IN&TAKEAWAY</h3>
+                    <p>Get your favorite KFC meals delivered to your doorstep or enjoy them at our outlet with dine-in
+                        and takeaway options for your convenience.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
 </body>
 
 </html>
